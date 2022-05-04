@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "weather bot",
+  "main": "src/index.js",
+  "type": "module",
+  "module": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weather",
+    "bot"
+  ],
+  "author": "Roderick Smith",
+  "license": "ISC",
+  "dependencies": {
+    "@cicciosgamino/openweather-apis": "^5.2.0",
+    "discord.js": "^13.6.0",
+    "esm": "^3.2.25"
+  }
+}
