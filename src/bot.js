@@ -7,7 +7,7 @@ const client = new Discord.Client(
         intents: ['GUILDS', 'GUILD_MESSAGES'],
     }
 );
-const token = "OTY5Mzc1NTgxNzg5NjUxMDA0.YmsfXA.IeUh3QTP0SSteQj_gCje1RI9Rjs";
+const token = "";
 
 /**
  * 
