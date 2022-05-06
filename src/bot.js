@@ -1,37 +1,26 @@
 import * as Discord from 'discord.js';
-import { getTemperature } from './weather.js';
+import { gitRepo } from './gh.js';
 
-let regExp = ""
 
 const client = new Discord.Client(
     {
         intents: ['GUILDS', 'GUILD_MESSAGES'],
     }
 );
-const token = "";
+const token = "OTY5Mzc1NTgxNzg5NjUxMDA0.YmsfXA.IeUh3QTP0SSteQj_gCje1RI9Rjs";
 
 /**
  * 
- * @param {discord.Message} message 
+ * @param {Discord.Message} message 
  */
 async function onMessage(message){
-    if (zipCodeFunc(message.content)) {
-        const temp = await getTemperature(message.content)
-        message.reply(`It is currently ${temp} outside`)
+    if (message.content.includes('!project')) {
+        const userName = message.content.split(" ")[1];
+        const projList = await gitRepo(userName);
+        message.reply(`Git Repo project names: ${projList}`);
+        
+        
     };
-}
-
-function zipCodeFunc(str){
- regExp = /^[0-9]{5}/;
-  
-        if (regExp.test(str))
-          {
-            return true;
-          }
-        else
-          {
-            return false;
-          }
 }
 
 
