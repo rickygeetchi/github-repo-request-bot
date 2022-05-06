@@ -17,7 +17,7 @@ async function onMessage(message){
     if (message.content.includes('!project')) {
         const userName = message.content.split(" ")[1];
         const projList = await gitRepo(userName);
-        message.reply(`Git Repo project names: ${projList}`);
+        message.reply(`${projList.length} Git Repo projects: ${projList}.`);
         
         
     };
