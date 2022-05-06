@@ -2,7 +2,7 @@ import got from 'got';
 
 export async function gitRepo(userName) {
    
-    const response = await got(`https://api.github.com/users/${userName}/repos`,{responseType: 'json'});
+    const response = await got(`https://api.github.com/users/${userName}/repos?per_page=50`,{responseType: 'json'});
     const data = response.body;
     
     
